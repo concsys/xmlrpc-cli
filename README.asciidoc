@@ -2,7 +2,33 @@
 
 ----
 npm install -g @csys.pub/xmlrpc-cli
+----
 
+----
+usage: csys-xmlrpc-cli [-h] [--df MOMENT_FORMAT_STRING]
+                       [--df-encode MOMENT_FORMAT_STRING]
+                       [--df-decode MOMENT_FORMAT_STRING] [-H Header: value]
+                       url methodName params
+
+Positional arguments:
+  url                   url to send to
+  methodName            method to call
+  params                params to send (yaml)
+
+Optional arguments:
+  -h, --help            Show this help message and exit.
+  --df MOMENT_FORMAT_STRING
+                        format to use for encoding and decoding
+  --df-encode MOMENT_FORMAT_STRING
+                        format to use for encoding (only once)
+  --df-decode MOMENT_FORMAT_STRING
+                        add additional format to use for decoding (repeat to 
+                        add more)
+  -H Header: value, --header Header: value
+                        url to send to
+----
+
+----
 # Example UCIP Request
 csys-xmlrpc-cli --df-encode 'YYYYMMDDTHH:mm:ssZZ' -H "User-Agent:IVR/5.0/1.0" -H "Authorization: Basic $(echo -n 'user:pass' | base64)" http://172.17.4.251:10011/Air GetBalanceAndDate '[{ originNodeType: EXT, originHostName: TEST, originTransactionID: "13", originTimeStamp: !!timestamp "'$(date +%Y-%m-%dT%H:%M:%S%:z)'", subscriberNumberNAI: 2, subscriberNumber: "325423558361" }]' 2>/dev/null  | jq .
 ----
