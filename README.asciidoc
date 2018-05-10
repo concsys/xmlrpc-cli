@@ -1,4 +1,4 @@
-= ...
+= @csys.pub/xmlrpc-cli
 
 ----
 npm install -g @csys.pub/xmlrpc-cli
