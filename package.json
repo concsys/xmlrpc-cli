@@ -1,0 +1,29 @@
+{
+  "name": "@csys.pub/xmlrpc-cli",
+  "version": "1.0.0-beta.0",
+  "description": "",
+  "author": "Concurrent Systems",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "rimraf --glob dist *.tgz",
+    "start": "node xmlrpc-cli.js",
+    "postversion": "git push && git push --tags",
+    "pub-pr": "npm version prerelease && npm publish",
+    "__none": "npm --version"
+  },
+  "bin": {
+    "csys-xmlrpc-cli": "xmlrpc-cli.js"
+  },
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "js-yaml": "^3.11.0",
+    "moment": "^2.22.1",
+    "xmlrpc": "^1.3.2"
+  },
+  "engines": {
+    "node": "^8.11.0"
+  },
+  "keywords": [
+    "xmlrpc"
+  ]
+}
