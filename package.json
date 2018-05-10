@@ -4,6 +4,10 @@
   "description": "",
   "author": "Concurrent Systems",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:concsys/xmlrpc-cli.git"
+  },
   "scripts": {
     "clean": "rimraf --glob dist *.tgz",
     "start": "node xmlrpc-cli.js",
