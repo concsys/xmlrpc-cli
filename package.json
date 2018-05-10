@@ -1,5 +1,5 @@
 {
-  "name": "csys-xmlrpc-cli",
+  "name": "@csys.pub/xmlrpc-cli",
   "version": "1.0.0-beta.2",
   "description": "",
   "author": "Concurrent Systems",
@@ -10,6 +10,9 @@
     "postversion": "git push && git push --tags",
     "pub-pr": "npm version prerelease && npm publish",
     "__none": "npm --version"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bin": {
     "csys-xmlrpc-cli": "xmlrpc-cli.js"
